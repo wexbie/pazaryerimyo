@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import useDialogState from '@/hooks/use-dialog-state'
 import { User } from '../data/schema'
 
-type UsersDialogType = 'davet' | 'ekle' | 'duzenle' | 'sil' | 'edit' | 'delete' | 'invite' | 'add';
+type UsersDialogType = 'davet' | 'ekle' | 'duzenle' | 'sil' | 'edit' | 'delete' | 'invite' | 'add' | null;
 
 interface UsersContextType {
-  open: UsersDialogType | null
-  setOpen: (str: UsersDialogType | null) => void
+  open: UsersDialogType
+  setOpen: (str: UsersDialogType) => void
   currentRow: User | null
   setCurrentRow: React.Dispatch<React.SetStateAction<User | null>>
 }
@@ -18,7 +18,7 @@ interface Props {
 }
 
 export default function UsersProvider({ children }: Props) {
-  const [open, setOpen] = useDialogState<UsersDialogType | null>(null)
+  const [open, setOpen] = useDialogState<UsersDialogType>(null)
   const [currentRow, setCurrentRow] = useState<User | null>(null)
 
   return (
