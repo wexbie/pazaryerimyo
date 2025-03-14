@@ -1,4 +1,4 @@
-/*import { Header } from '@/components/layout/header'
+import { Header } from '@/components/layout/header'
 import { Main } from '@/components/layout/main'
 import { ProfileDropdown } from '@/components/profile-dropdown'
 import { Search } from '@/components/search'
@@ -10,41 +10,16 @@ import { UsersTable } from './components/users-table'
 import UsersProvider from './context/users-context'
 import { userListSchema } from './data/schema'
 import { users } from './data/users'
-import { TopNav } from '@/components/layout/top-nav'
-
-const topNav = [
-  {
-    title: "Ana Sayfa",
-    href: "/",
-    isActive: false,
-  },
-  {
-    title: "Bölümler",
-    href: "/bolumler",
-    isActive: false,
-  },
-  {
-    title: "Eğitmenler",
-    href: "/egitmenler",
-    isActive: false,
-  },
-  {
-    title: "Kullanıcılar",
-    href: "/users",
-    isActive: true,
-  },
-]
-
 
 export default function Users() {
+  // Parse user list
   const userList = userListSchema.parse(users)
 
   return (
     <UsersProvider>
       <Header fixed>
-        <TopNav links={topNav} />
+        <Search />
         <div className='ml-auto flex items-center space-x-4'>
-          <Search />
           <ThemeSwitch />
           <ProfileDropdown />
         </div>
@@ -53,9 +28,9 @@ export default function Users() {
       <Main>
         <div className='mb-2 flex flex-wrap items-center justify-between space-y-2'>
           <div>
-            <h2 className='text-2xl font-bold tracking-tight'>Kullanıcılar</h2>
+            <h2 className='text-2xl font-bold tracking-tight'>User List</h2>
             <p className='text-muted-foreground'>
-              Kullanıcılarınızı ve onların rollerini buradan yönetin.
+              Manage your users and their roles here.
             </p>
           </div>
           <UsersPrimaryButtons />
@@ -69,4 +44,3 @@ export default function Users() {
     </UsersProvider>
   )
 }
-*/
