@@ -18,13 +18,13 @@ interface Props {
 }
 
 export default function UsersProvider({ children }: Props) {
-  const [open, setOpen] = useDialogState<UsersDialogType>(null)
+  const [open, setOpen] = useDialogState<UsersDialogType | null>(null) // Null başlangıç değeri
   const [currentRow, setCurrentRow] = useState<User | null>(null)
 
   return (
-    <UsersContext value={{ open, setOpen, currentRow, setCurrentRow }}>
+    <UsersContext.Provider value={{ open, setOpen, currentRow, setCurrentRow }}>
       {children}
-    </UsersContext>
+    </UsersContext.Provider>
   )
 }
 
@@ -33,7 +33,7 @@ export const useUsers = () => {
   const usersContext = React.useContext(UsersContext)
 
   if (!usersContext) {
-    throw new Error('useUsers has to be used within <UsersContext>')
+    throw new Error('useUsers has to be used within <UsersProvider>')
   }
 
   return usersContext
