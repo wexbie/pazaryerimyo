@@ -17,7 +17,7 @@ import { ThemeSwitch } from '@/components/theme-switch'
 import { MapPin } from "lucide-react"
 
 const announcements = [
-  { id: 1, title: "Beta Duyuru", description: "Bu web sitesi şuanda geliştirme aşamasındadır. <a> Şikayet ve öneriler için wexportfolyo.vercel.app <a>", date: "2025-03-14" },
+  { id: 1, title: "Beta Duyuru", description: "Bu web sitesi şuanda geliştirme aşamasındadır.Şikayet ve öneriler için: wexportfolyo.vercel.app", date: "2025-03-14" },
   { id: 2, title: "İŞKUR GENÇLİK PROGRAMINI KAZANAN ÖĞRENCİLERİN DİKKATİNE", description: "İŞKUR Gençlik Programı kapsamında, Meslek Yüksekokulumuzda 10 Mart 2025 tarihi itibarıyla çalışmaya başlayan öğrencilerimiz için 11 Mart 2025 Salı günü saat 11:30’da Konferans Salonu’nda bir toplantı düzenlenecektir. Öğrencilerimizin, Bahar Yarıyılı ders programlarının çıktısını alarak toplantıya katılmaları önemle rica olunur.", date: "2025-03-10" },
   { id: 3, title: "İŞKUR Gençlik Programı Yedek Olarak Kazananlar", description: "Üniversitemiz ile Bilecik İŞKUR İl Müdürlüğü arasında imzalanan protokol çerçevesinde yedek olarak başvuru hakkı kazanan öğrencilerimizin 10.03.2025 tarihi mesai bitimine kadar birimimiz öğrenci işlerine şahsen başvuru yapması gerekmektedir. Başvuru için gerekli evraklar aşağıda yer almaktadır. ", date: "2025-03-06" },
   { id: 4, title: "İŞKUR Gençlik Programı Kapsamında Başvuru Şartlarını Taşımadığı Tespit Edilen Öğrenciler Listesi", description: "İŞKUR Gençlik Programı kapsamında başvuru şartlarını taşımadığı tespit edilen öğrenciler listesi aşağıda yer almaktadır.", date: "2025-03-06" },
